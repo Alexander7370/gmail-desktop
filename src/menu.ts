@@ -231,17 +231,17 @@ const applicationMenu: MenuItemConstructorOptions[] = [
     role: 'help',
     submenu: [
       {
-        label: `${app.name} Website`,
+        label: `License Information`,
         click() {
-          shell.openExternal('https://github.com/timche/gmail-desktop')
+          shell.openExternal(
+            'https://github.com/Alexander7370/gmail-desktop/blob/master/LICENSE'
+          )
         }
       },
       {
-        label: 'Report an Issue',
+        label: 'Leave a Review',
         click() {
-          shell.openExternal(
-            'https://github.com/timche/gmail-desktop/issues/new/choose'
-          )
+          shell.openExternal('https://gmail-desktop.acato.io')
         }
       },
       {

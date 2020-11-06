@@ -1,11 +1,11 @@
 {
   "name": "gmail-desktop",
   "productName": "Gmail Desktop",
-  "version": "2.20.2",
+  "version": "1.0.1",
   "description": "Unofficial Gmail Desktop App",
   "private": true,
-  "repository": "timche/gmail-desktop",
-  "author": "Tim Cheung <tim@cheung.io>",
+  "repository": "alexander7370/gmail-desktop",
+  "author": "Alexander Cato <me@acato.io>",
   "license": "MIT",
   "main": "dist-js/app.js",
   "scripts": {
@@ -103,7 +103,7 @@
     "files": [
       "**/*"
     ],
-    "appId": "io.cheung.gmail-desktop",
+    "appId": "io.acato.gmail-desktop",
     "mac": {
       "category": "public.app-category.productivity",
       "darkModeSupport": false

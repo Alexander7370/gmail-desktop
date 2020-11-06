@@ -105,16 +105,9 @@ function createWindow(): void {
       const { response } = await dialog.showMessageBox({
         type: 'info',
         message: `It looks like you are unable to sign-in, because ${app.name} is using a non-supported user agent and Gmail is blocking it.`,
-        detail: `Do you want ${app.name} try to fix it automatically? Otherwise you can set your own user agent (see "Troubleshoot").`,
-        buttons: ['Yes', 'No', 'Troubleshoot']
+        detail: `Do you want ${app.name} try to fix it automatically?`,
+        buttons: ['Yes', 'No']
       })
-
-      if (response === 2) {
-        openExternalUrl(
-          'https://github.com/timche/gmail-desktop#i-cant-sign-in-this-browser-or-app-may-not-be-secure'
-        )
-        return
-      }
 
       if (response === 1) {
         return
