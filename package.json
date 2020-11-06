@@ -5,7 +5,7 @@
   "description": "Unofficial Gmail Desktop App",
   "private": true,
   "repository": "alexander7370/gmail-desktop",
-  "author": "Alexander Cato <me@acato.io>",
+  "author": "Alexander Cato <admin@acato.io>",
   "license": "MIT",
   "main": "dist-js/app.js",
   "scripts": {
@@ -103,7 +103,7 @@
     "files": [
       "**/*"
     ],
-    "appId": "io.acato.gmail-desktop",
+    "appId": "io.acato.g.cubed",
     "mac": {
       "category": "public.app-category.productivity",
       "darkModeSupport": false

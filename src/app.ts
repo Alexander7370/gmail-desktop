@@ -39,7 +39,7 @@ const shouldStartMinimized =
 const trayIcon = createTrayIcon(false)
 const trayIconUnread = createTrayIcon(true)
 
-app.setAppUserModelId('io.acato.gmail-desktop')
+app.setAppUserModelId('io.acato.g.cubed')
 
 let mainWindow: BrowserWindow
 let replyToWindow: BrowserWindow
