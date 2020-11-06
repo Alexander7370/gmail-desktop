@@ -14,7 +14,6 @@ interface LastWindowState {
 }
 
 export enum ConfigKey {
-  AutoUpdate = 'autoUpdate',
   CompactHeader = 'compactHeader',
   DebugMode = 'debugMode',
   HideFooter = 'hideFooter',
@@ -31,7 +30,6 @@ export enum ConfigKey {
 }
 
 type TypedStore = {
-  [ConfigKey.AutoUpdate]: boolean
   [ConfigKey.LastWindowState]: LastWindowState
   [ConfigKey.CompactHeader]: boolean
   [ConfigKey.HideFooter]: boolean
@@ -48,7 +46,6 @@ type TypedStore = {
 }
 
 const defaults = {
-  [ConfigKey.AutoUpdate]: true,
   [ConfigKey.LastWindowState]: {
     bounds: {
       width: 800,
@@ -59,17 +56,17 @@ const defaults = {
     fullscreen: false,
     maximized: true
   },
-  [ConfigKey.CompactHeader]: true,
+  [ConfigKey.CompactHeader]: false,
   [ConfigKey.HideFooter]: true,
-  [ConfigKey.HideRightSidebar]: true,
+  [ConfigKey.HideRightSidebar]: false,
   [ConfigKey.HideSupport]: true,
   [ConfigKey.DebugMode]: is.development,
   [ConfigKey.LaunchMinimized]: false,
   [ConfigKey.AutoHideMenuBar]: false,
   [ConfigKey.EnableTrayIcon]: !is.macos,
-  [ConfigKey.AutoFixUserAgent]: false,
+  [ConfigKey.AutoFixUserAgent]: true,
   [ConfigKey.TrustedHosts]: [],
-  [ConfigKey.ConfirmExternalLinks]: true
+  [ConfigKey.ConfirmExternalLinks]: false
 }
 
 const config = new Store<TypedStore>({

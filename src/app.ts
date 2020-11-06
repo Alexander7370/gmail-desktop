@@ -12,7 +12,6 @@ import {
 } from 'electron'
 import { is } from 'electron-util'
 
-import { init as initAutoUpdates } from './updates'
 import config, { ConfigKey } from './config'
 import {
   init as initCustomStyles,
@@ -30,7 +29,6 @@ import electronContextMenu = require('electron-context-menu')
 
 initDebug()
 initDownloads()
-initAutoUpdates()
 
 electronContextMenu({ showCopyImageAddress: true, showSaveImageAs: true })
 
@@ -41,7 +39,7 @@ const shouldStartMinimized =
 const trayIcon = createTrayIcon(false)
 const trayIconUnread = createTrayIcon(true)
 
-app.setAppUserModelId('io.cheung.gmail-desktop')
+app.setAppUserModelId('io.acato.gmail-desktop')
 
 let mainWindow: BrowserWindow
 let replyToWindow: BrowserWindow

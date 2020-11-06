@@ -2,7 +2,6 @@ import { app, shell, Menu, MenuItemConstructorOptions } from 'electron'
 import * as fs from 'fs'
 import { is } from 'electron-util'
 
-import { checkForUpdates } from './updates'
 import config, { ConfigKey } from './config'
 import { setCustomStyle, USER_CUSTOM_STYLE_PATH } from './custom-styles'
 import { viewLogs } from './logs'
@@ -77,12 +76,6 @@ const applicationMenu: MenuItemConstructorOptions[] = [
       {
         label: `About ${app.name}`,
         role: 'about'
-      },
-      {
-        label: 'Check for Updates...',
-        click() {
-          checkForUpdates()
-        }
       },
       {
         type: 'separator'
@@ -163,15 +156,6 @@ const applicationMenu: MenuItemConstructorOptions[] = [
           } else {
             app.setAsDefaultProtocolClient('mailto')
           }
-        }
-      },
-      {
-        label: 'Auto Update',
-        type: 'checkbox',
-        checked: config.get(ConfigKey.AutoUpdate),
-        click({ checked }: { checked: boolean }) {
-          config.set(ConfigKey.AutoUpdate, checked)
-          showRestartDialog(checked, 'auto updates')
         }
       },
       {
